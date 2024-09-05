@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import "../../styles/mixins.scss";
+
+.NavBar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: $blue;
+  border-bottom: 2px solid $black;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    height: 60px;
+
+    .hamburger {
+      margin: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+
+      h2 {
+        font-family: "Luckiest Guy", cursive;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        transition: color 0.3s ease-in;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}

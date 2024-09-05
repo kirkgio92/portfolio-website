@@ -1,0 +1,94 @@
+@import "../../styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  height: 100vh;
+  max-width: 1440px;
+  width: 100%;
+
+  .mainWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    // height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+
+    .imageWrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      width: 50%;
+
+      .heroImage {
+        margin: 0;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      width: 50%;
+
+      h1 {
+        font-size: 58px;
+        text-align: center;
+
+        .spanColor {
+          font-family: "Luckiest Guy", cursive;
+          font-weight: 400;
+          font-style: normal;
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+          color: $red;
+        }
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  }
+
+  .techStackWrapper {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide the overflowing part */
+    padding: 20px 0; /* Optional: Spacing */
+
+    .techStack {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      white-space: nowrap; /* Prevent line breaks */
+
+      .techItem {
+        display: inline-block;
+        padding: 0 30px;
+        font-size: 24px;
+        white-space: nowrap;
+        color: #333;
+        font-weight: bold;
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0); /* Start position */
+      }
+      100% {
+        transform: translateX(-100%); /* End position, animates left */
+      }
+    }
+  }
+}

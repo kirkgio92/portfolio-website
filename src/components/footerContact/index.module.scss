@@ -1,0 +1,112 @@
+@import "../../styles/mixins.scss";
+
+.FooterContact {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: $blue;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 1440px;
+    width: 100%;
+  }
+
+  .mainWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 24px;
+    max-width: 1440px;
+    width: 50%;
+
+    .imageWrapper {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+
+      .heroImage {
+        margin: 0;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      margin: 0;
+
+      h1 {
+        font-size: 58px;
+        text-align: center;
+
+        .spanColor {
+          font-family: "Luckiest Guy", cursive;
+          font-weight: 400;
+          font-style: normal;
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+          color: $red;
+        }
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 40px;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    .socialWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+
+        p,
+        img,
+        a {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+
+    .formWrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
