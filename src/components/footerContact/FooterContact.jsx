@@ -54,7 +54,7 @@ const FooterContact = () => {
             />
           </div>
           <div className={styles.textWrapper}>
-            <h1>Hi there, it's</h1>
+            <h1>Hi there, it&apos;s</h1>
             <h1>
               <span className={styles.spanColor}>GIOVANNI SCIVOLI</span>
             </h1>
