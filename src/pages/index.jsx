@@ -16,11 +16,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <NavBar />
-        <Hero />
-        <Projects />
-        <Experience />
-        <FooterContact />
+        <NavBar
+          heroId="#hero"
+          projectsId="#projects"
+          experienceId="#experience"
+          reachOutId="#reachOut"
+        />
+        <Hero id="hero" />
+        <Projects id="projects" />
+        <Experience id="experience" />
+        <FooterContact id="reachOut" />
       </main>
     </>
   );

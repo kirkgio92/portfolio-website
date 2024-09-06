@@ -1,5 +1,4 @@
 @import "../../styles/mixins.scss";
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 .Hero {
   display: flex;
@@ -14,17 +13,18 @@
   .mainWrapper {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
     gap: 24px;
-    // height: 100vh;
     max-width: 1440px;
-    width: 100%;
+    width: 50%;
 
     .imageWrapper {
       display: flex;
       justify-content: center;
       margin: 0;
-      width: 50%;
 
       .heroImage {
         margin: 0;
@@ -37,18 +37,15 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      gap: 8px;
       margin: 0;
-      width: 50%;
 
       h1 {
         font-size: 58px;
         text-align: center;
 
         .spanColor {
-          font-family: "Luckiest Guy", cursive;
-          font-weight: 400;
-          font-style: normal;
-          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+          text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
           color: $red;
         }
       }
@@ -57,6 +54,39 @@
         margin: 0;
         font-size: 40px;
         text-align: center;
+      }
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+
+    .socialWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+
+        p,
+        img,
+        a {
+          margin: 0;
+        }
+
+        a {
+          transition: all 0.3s ease-in;
+          &:hover {
+            font-weight: bold;
+            color: $red;
+          }
+        }
       }
     }
   }
