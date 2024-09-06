@@ -24,7 +24,7 @@ const Projects = ({ id }) => {
               A web app designed for sports enthusiasts. With technologies like
               Next.js, React.js, MongoDB, and Sass, Just Play simplifies the
               organization of matches on real fields in your city 📍, allowing
-              you to easily select your favorite sport. Whether you're
+              you to easily select your favorite sport. Whether you&apos;re
               passionate about soccer ⚽, basketball 🏀, tennis 🥎, or
               volleyball 🏐, Just Play connects you with other players, offering
               an engaging and fun social experience 🤩.
