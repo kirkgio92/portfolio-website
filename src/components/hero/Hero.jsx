@@ -52,7 +52,7 @@ const Hero = ({ id }) => {
         <div className={styles.socialWrapper}>
           <div className={styles.item}>
             <Image
-              className={styles.heroImage}
+              className={styles.socialLogo}
               src="/email.png"
               alt="email"
               width={30}
@@ -62,9 +62,9 @@ const Hero = ({ id }) => {
           </div>
           <div className={styles.item}>
             <Image
-              className={styles.heroImage}
+              className={styles.socialLogo}
               src="/linkedin.png"
-              alt="email"
+              alt="linkedin"
               width={30}
               height={30}
             />
@@ -74,9 +74,9 @@ const Hero = ({ id }) => {
           </div>
           <div className={styles.item}>
             <Image
-              className={styles.heroImage}
+              className={styles.socialLogo}
               src="/github-mark.svg"
-              alt="email"
+              alt="github"
               width={30}
               height={30}
             />

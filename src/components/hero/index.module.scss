@@ -122,3 +122,75 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .Hero {
+    .mainWrapper {
+      width: 100%;
+
+      .imageWrapper {
+        .heroImage {
+          width: 220px;
+          height: 220px;
+        }
+      }
+
+      .textWrapper {
+        h1 {
+          font-size: 28px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      .socialWrapper {
+        flex-direction: column;
+        gap: 12px;
+
+        .item {
+          justify-content: center;
+          width: 70%;
+
+          .socialLogo {
+            width: 20px;
+            height: 20px;
+          }
+
+          p,
+          img,
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .techStackWrapper {
+      padding: 0;
+      .techStack {
+        .techItem {
+          display: inline-block;
+          padding: 0 15px;
+          font-size: 16px;
+          white-space: nowrap;
+          color: #333;
+          font-weight: bold;
+        }
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0); /* Start position */
+        }
+        100% {
+          transform: translateX(-100%); /* End position, animates left */
+        }
+      }
+    }
+  }
+}
