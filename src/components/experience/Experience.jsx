@@ -139,6 +139,77 @@ const Experience = ({ id }) => {
             )}
           </AnimatePresence>
         </div>
+        <AnimatePresence>
+          {selectedExperience && (
+            <>
+              <motion.div
+                key="overlay"
+                className={styles.Overlay}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              />
+              <motion.div
+                className={styles.modalContentMobile}
+                key={selectedExperience.id} // Make sure to provide a unique key
+                layoutId={selectedId}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.1 }} // Optional: Add a duration for smoother transitions
+              >
+                <h2>{selectedExperience.title}</h2>
+                <h3>{selectedExperience.company}</h3>
+                <p>
+                  {selectedExperience.location} | {selectedExperience.start} -{" "}
+                  {selectedExperience.end}
+                </p>
+                <p>
+                  <strong>Duration:</strong> {selectedExperience.duration}
+                </p>
+                {selectedExperience.responsibilities.map((desc, index) => (
+                  <p key={index}>- {desc}</p>
+                ))}
+                {selectedExperience.techUsed && (
+                  <p>
+                    <strong>Tech:</strong>{" "}
+                    {selectedExperience.techUsed.join(", ")}
+                  </p>
+                )}
+                {selectedExperience.projectLink && (
+                  <p>
+                    <strong>Project Link:</strong>{" "}
+                    <a
+                      href={selectedExperience.projectLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {selectedExperience.projectLink}
+                    </a>
+                  </p>
+                )}
+                {selectedExperience.repositoryLink && (
+                  <p>
+                    <strong>Repository Link:</strong>{" "}
+                    <a
+                      href={selectedExperience.repositoryLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {selectedExperience.repositoryLink}
+                    </a>
+                  </p>
+                )}
+                <motion.button
+                  className={styles.button}
+                  onClick={() => setSelectedId(null)}
+                >
+                  Close
+                </motion.button>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
